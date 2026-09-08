@@ -1,0 +1,120 @@
+Script started on 2026-09-08 15:31:34-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="140" LINES="15"]
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ [7mscript -a evidencias.log[27m
+[K
+]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ [7mscript -a evidencias.log[27m[1Pscript -a evidencias.lo[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+[K
+]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ 
+[K
+]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ make
+[?2004l
+gcc -Wall -Wextra -Wpedantic -std=c11 -g main.c -o scheduler
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ [7m./scheduler rate voo.txt[27m./scheduler rate voo.txt
+[?2004l
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ [7m./scheduler abc voo.txt[27m./scheduler abc voo.txt
+[?2004l
+Erro: algoritmo deve ser rate ou edf
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ 
+[K
+]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ 
+[K
+]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ 
+[K
+]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ 
+[K
+]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ 
+[K
+]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ make
+[?2004l
+gcc -Wall -Wextra -Wpedantic -std=c11 -g main.c -o scheduler
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ [7m./scheduler rate voo.txt[27m./scheduler rate voo.txt
+[?2004l
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ [7m./scheduler rate teste.txt[27m./scheduler rate teste.txt
+[?2004l
+Erro: nao foi possivel abrir o arquivo
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ [7m./scheduler rate voo.txt[27m./scheduler rate voo.txt
+[?2004l
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ [7m./scheduler rate voo.txt[27m./scheduler rate voo.txt
+[?2004l
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ [7m./scheduler rate voo.txt[27m./scheduler rate voo.txt
+[?2004l
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ make clean
+[?2004l
+rm -f scheduler
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ make [K
+[?2004l
+gcc -Wall -Wextra -Wpedantic -std=c11 -g main.c -o scheduler
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ [7m./scheduler rate voo.txt[27m./scheduler rate voo.txt
+[?2004l
+Erro: tempo total invalido
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ make clen[Kan
+[?2004l
+rm -f scheduler
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ make
+[?2004l
+gcc -Wall -Wextra -Wpedantic -std=c11 -g main.c -o scheduler
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ [7m./scheduler rate voo.txt[27m./scheduler rate voo.txt
+[?2004l
+Erro: tempo total deve ser positivo
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ mak [Ke clean
+[?2004l
+rm -f scheduler
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ make
+[?2004l
+gcc -Wall -Wextra -Wpedantic -std=c11 -g main.c -o scheduler
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ [7m./scheduler rate voo.txt[27m./scheduler rate voo.txt
+[?2004l
+Erro: tempo total invalido
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ make clean
+[?2004l
+rm -f scheduler
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ make
+[?2004l
+gcc -Wall -Wextra -Wpedantic -std=c11 -g main.c -o scheduler
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ [7m./scheduler rate voo.txt[27m./scheduler rate voo.txt
+[?2004l
+Erro: tempo total invalido
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ make clean
+[?2004l
+rm -f scheduler
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ make
+[?2004l
+gcc -Wall -Wextra -Wpedantic -std=c11 -g main.c -o scheduler
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ [7m./scheduler rate voo.txt[27m./scheduler rate voo.txt
+[?2004l
+Erro: tempo total invalido
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ make clean
+[?2004l
+rm -f scheduler
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ make
+[?2004l
+gcc -Wall -Wextra -Wpedantic -std=c11 -g main.c -o schedulerScript started on 2026-09-08 16:18:01-03:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="140" LINES="15"]
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ 
+[K
+]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ make
+[?2004l
+gcc -Wall -Wextra -Wpedantic -std=c11 -g main.c -o scheduler
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ [7m./scheduler rate voo.txt[27m./scheduler rate voo.txt
+[?2004l
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ make clean
+[?2004l
+rm -f scheduler
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ make
+[?2004l
+gcc -Wall -Wextra -Wpedantic -std=c11 -g main.c -o scheduler
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ [7m./scheduler rate voo.txt[27m./scheduler rate voo.txt
+[?2004l
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ make clean
+[?2004l
+rm -f scheduler
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ [7m./scheduler rate voo.txt[27m./scheduler rate voo.txt
+[?2004l
+bash: ./scheduler: No such file or directory
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ ls
+[?2004l
+[0m[01;32mevidencias.log[0m  [01;32mmain.c[0m  [01;32mmakefile[0m  [01;32mvoo.txt[0m
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ [7m./scheduler rate voo.txt[27m./scheduler rate voo.txt
+[?2004l
+bash: ./scheduler: No such file or directory
+[?2004h]0;luisa@LAPTOP-Q39GM9AS: /mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[01;32mluisa@LAPTOP-Q39GM9AS[00m:[01;34m/mnt/c/Users/luisa/OneDrive/Área de Trabalho/scheduler/escalonamento[00m$ make
+[?2004l
+gcc -Wall -Wextra -Wpedantic -std=c11 -g main.c -o scheduler
