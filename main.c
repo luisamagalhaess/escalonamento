@@ -6,6 +6,10 @@ typedef struct Tarefa{
     int periodo;
     int deadline;
     int burst;
+    int restante;
+    int proximaChegada;
+    int deadlineAbsoluto;
+    int ativa;
 } Tarefa;
 
 int main(int argc, char *argv[]) {
@@ -66,10 +70,28 @@ int main(int argc, char *argv[]) {
             fclose(arquivo);
             return 1;
         }
+        tarefas[qtdTarefas].restante = 0;
+        tarefas[qtdTarefas].proximaChegada = 0;
+        tarefas[qtdTarefas].deadlineAbsoluto = 0;
+        tarefas[qtdTarefas].ativa = 0;
 
         qtdTarefas++;
     }
     fclose(arquivo);
+
+    for (int tempo = 0; tempo < tempoTotal; tempo++) {
+
+        for (int i = 0; i < qtdTarefas; i++) {
+
+            if (tempo == tarefas[i].proximaChegada) {
+
+                tarefas[i].restante = tarefas[i].burst;
+                tarefas[i].deadlineAbsoluto = tempo + tarefas[i].deadline;
+                tarefas[i].proximaChegada = tempo + tarefas[i].periodo;
+                tarefas[i].ativa = 1;
+            }
+        }
+    }
     
     return 0;
 }
