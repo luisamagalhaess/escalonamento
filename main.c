@@ -15,6 +15,12 @@ typedef struct Tarefa{
     int killed;
 } Tarefa;
 
+typedef struct Evento {
+    int tarefa;
+    int duracao;
+    char motivo;
+} Evento;
+
 int escolherRate(Tarefa tarefas[], int qtdTarefas) {
     int escolhida = -1;
     for (int i = 0; i < qtdTarefas; i++) {
@@ -110,10 +116,23 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
+    int tarefaAnterior = -2;
+    int duracaoAtual = 0;
+    Evento eventos[1000];
+    int qtdEventos = 0;
+
     for (int tempo = 0; tempo < tempoTotal; tempo++) {
 
         for (int i = 0; i < qtdTarefas; i++) {
             if (tarefas[i].ativa == 1 && tempo == tarefas[i].deadlineAbsoluto && tarefas[i].restante > 0) {
+                if (i == tarefaAnterior && duracaoAtual > 0) {
+                    eventos[qtdEventos].tarefa = i;
+                    eventos[qtdEventos].duracao = duracaoAtual;
+                    eventos[qtdEventos].motivo = 'L';
+                    qtdEventos++;
+                    tarefaAnterior = -2;
+                    duracaoAtual = 0;
+                }
                 tarefas[i].lost++;
                 tarefas[i].restante = 0;
                 tarefas[i].ativa = 0;
@@ -131,14 +150,41 @@ int main(int argc, char *argv[]) {
             }
         }
         int escolhida = escolherRate(tarefas, qtdTarefas);
+        if (escolhida == tarefaAnterior) {
+            duracaoAtual++;
+        } else {
+
+            if (tarefaAnterior != -2 && duracaoAtual > 0) {
+                eventos[qtdEventos].tarefa = tarefaAnterior;
+                eventos[qtdEventos].duracao = duracaoAtual;
+                eventos[qtdEventos].motivo = 'H';
+                qtdEventos++;
+            }
+
+            tarefaAnterior = escolhida;
+            duracaoAtual = 1;
+        }
+
         if (escolhida != -1) {
             tarefas[escolhida].restante--;
 
             if (tarefas[escolhida].restante == 0) {
                 tarefas[escolhida].complete++;
                 tarefas[escolhida].ativa = 0;
+                eventos[qtdEventos].tarefa = escolhida;
+                eventos[qtdEventos].duracao = duracaoAtual;
+                eventos[qtdEventos].motivo = 'F';
+                qtdEventos++;
+                tarefaAnterior = -2;
+                duracaoAtual = 0;
             }
         }
+    }
+
+    if (tarefaAnterior != -2 && duracaoAtual > 0) {
+        eventos[qtdEventos].tarefa = tarefaAnterior;
+        eventos[qtdEventos].duracao = duracaoAtual;
+        qtdEventos++;
     }
     
     for (int i = 0; i < qtdTarefas; i++) {
@@ -146,6 +192,15 @@ int main(int argc, char *argv[]) {
             tarefas[i].killed++;
             tarefas[i].ativa = 0;
             tarefas[i].restante = 0;
+        }
+    }
+
+    fprintf(saida, "EXECUTION BY RATE\n");
+    for (int i = 0; i < qtdEventos; i++) {
+        if (eventos[i].tarefa == -1) {
+            fprintf(saida, "idle for %d units\n", eventos[i].duracao);
+        } else {
+            fprintf(saida, "[%s] for %d units - %c\n", tarefas[eventos[i].tarefa].nome, eventos[i].duracao, eventos[i].motivo);
         }
     }
 
