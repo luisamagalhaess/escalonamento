@@ -10,7 +10,23 @@ typedef struct Tarefa{
     int proximaChegada;
     int deadlineAbsoluto;
     int ativa;
+    int lost;
+    int complete;
+    int killed;
 } Tarefa;
+
+int escolherRate(Tarefa tarefas[], int qtdTarefas) {
+    int escolhida = -1;
+    for (int i = 0; i < qtdTarefas; i++) {
+        if (tarefas[i].ativa == 1) {
+            if (escolhida == -1 || tarefas[i].periodo < tarefas[escolhida].periodo) {
+                escolhida = i;
+            }
+        }
+    }
+
+    return escolhida;
+}
 
 int main(int argc, char *argv[]) {
 
@@ -74,12 +90,23 @@ int main(int argc, char *argv[]) {
         tarefas[qtdTarefas].proximaChegada = 0;
         tarefas[qtdTarefas].deadlineAbsoluto = 0;
         tarefas[qtdTarefas].ativa = 0;
+        tarefas[qtdTarefas].lost = 0;
+        tarefas[qtdTarefas].complete = 0;
+        tarefas[qtdTarefas].killed = 0;
 
         qtdTarefas++;
     }
     fclose(arquivo);
 
     for (int tempo = 0; tempo < tempoTotal; tempo++) {
+
+        for (int i = 0; i < qtdTarefas; i++) {
+            if (tarefas[i].ativa == 1 && tempo == tarefas[i].deadlineAbsoluto && tarefas[i].restante > 0) {
+                tarefas[i].lost++;
+                tarefas[i].restante = 0;
+                tarefas[i].ativa = 0;
+            }
+        }
 
         for (int i = 0; i < qtdTarefas; i++) {
 
@@ -90,6 +117,23 @@ int main(int argc, char *argv[]) {
                 tarefas[i].proximaChegada = tempo + tarefas[i].periodo;
                 tarefas[i].ativa = 1;
             }
+        }
+        int escolhida = escolherRate(tarefas, qtdTarefas);
+        if (escolhida != -1) {
+            tarefas[escolhida].restante--;
+
+            if (tarefas[escolhida].restante == 0) {
+                tarefas[escolhida].complete++;
+                tarefas[escolhida].ativa = 0;
+            }
+        }
+    }
+    
+    for (int i = 0; i < qtdTarefas; i++) {
+        if (tarefas[i].ativa == 1 && tarefas[i].restante > 0) {
+            tarefas[i].killed++;
+            tarefas[i].ativa = 0;
+            tarefas[i].restante = 0;
         }
     }
     
