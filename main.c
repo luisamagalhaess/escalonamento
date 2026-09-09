@@ -34,6 +34,18 @@ int escolherRate(Tarefa tarefas[], int qtdTarefas) {
     return escolhida;
 }
 
+int escolherEDF(Tarefa tarefas[], int qtdTarefas) {
+    int escolhida = -1;
+    for (int i = 0; i < qtdTarefas; i++) {
+        if (tarefas[i].ativa == 1) {
+            if (escolhida == -1 || tarefas[i].deadlineAbsoluto < tarefas[escolhida].deadlineAbsoluto) {
+                escolhida = i;
+            }
+        }
+    }
+    return escolhida;
+}
+
 int main(int argc, char *argv[]) {
 
     if (argc != 3) {
@@ -149,7 +161,13 @@ int main(int argc, char *argv[]) {
                 tarefas[i].ativa = 1;
             }
         }
-        int escolhida = escolherRate(tarefas, qtdTarefas);
+        int escolhida;
+        if (strcmp(argv[1], "rate") == 0) {
+            escolhida = escolherRate(tarefas, qtdTarefas);
+        } else {
+            escolhida = escolherEDF(tarefas, qtdTarefas);
+        }
+
         if (escolhida == tarefaAnterior) {
             duracaoAtual++;
         } else {
@@ -195,7 +213,12 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    fprintf(saida, "EXECUTION BY RATE\n");
+    if (strcmp(argv[1], "rate") == 0) {
+        fprintf(saida, "EXECUTION BY RATE\n");
+    } else {
+        fprintf(saida, "EXECUTION BY EDF\n");
+    }
+    
     for (int i = 0; i < qtdEventos; i++) {
         if (eventos[i].tarefa == -1) {
             fprintf(saida, "idle for %d units\n", eventos[i].duracao);
