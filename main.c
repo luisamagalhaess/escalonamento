@@ -98,6 +98,18 @@ int main(int argc, char *argv[]) {
     }
     fclose(arquivo);
 
+    FILE *saida;
+    if (strcmp(argv[1], "rate") == 0) {
+        saida = fopen("rate_lfm3.out", "w");
+    } else {
+        saida = fopen("edf_lfm3.out", "w");
+    }
+
+    if (saida == NULL) {
+        fprintf(stderr, "Erro: nao foi possivel criar arquivo de saida\n");
+        return 1;
+    }
+
     for (int tempo = 0; tempo < tempoTotal; tempo++) {
 
         for (int i = 0; i < qtdTarefas; i++) {
@@ -136,6 +148,22 @@ int main(int argc, char *argv[]) {
             tarefas[i].restante = 0;
         }
     }
+
+    fprintf(saida, "LOST DEADLINES\n");
+    for (int i = 0; i < qtdTarefas; i++) {
+        fprintf(saida, "[%s] %d\n", tarefas[i].nome, tarefas[i].lost);
+    }
+
+    fprintf(saida, "COMPLETE EXECUTION\n");
+    for (int i = 0; i < qtdTarefas; i++) {
+        fprintf(saida, "[%s] %d\n", tarefas[i].nome, tarefas[i].complete);
+    }
+
+    fprintf(saida, "KILLED\n");
+    for (int i = 0; i < qtdTarefas; i++) {
+        fprintf(saida, "[%s] %d\n", tarefas[i].nome, tarefas[i].killed);
+    }
+    fclose(saida);
     
     return 0;
 }
