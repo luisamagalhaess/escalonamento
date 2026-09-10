@@ -77,10 +77,21 @@ int main(int argc, char *argv[]) {
         fclose(arquivo);
         return 1;
     }
+    char linha[200];
+    int leitura;
+    fgets(linha, sizeof(linha), arquivo);
+
     Tarefa tarefas[100];
     int qtdTarefas = 0;
-    int leitura;
-    while ((leitura = fscanf(arquivo, "%19s %d %d %d", tarefas[qtdTarefas].nome, &tarefas[qtdTarefas].periodo, &tarefas[qtdTarefas].deadline, &tarefas[qtdTarefas].burst)) != EOF) {
+    while (fgets(linha, sizeof(linha), arquivo) != NULL) {
+        if (qtdTarefas >= 100) {
+            fprintf(stderr, "Erro: numero maximo de tarefas excedido\n");
+            fclose(arquivo);
+            return 1;
+        }
+
+        leitura = sscanf(linha, "%19s %d %d %d", tarefas[qtdTarefas].nome, &tarefas[qtdTarefas].periodo, &tarefas[qtdTarefas].deadline, &tarefas[qtdTarefas].burst);
+
         if (leitura != 4) {
             fprintf(stderr, "Erro: arquivo mal formatado\n");
             fclose(arquivo);
@@ -218,7 +229,7 @@ int main(int argc, char *argv[]) {
     } else {
         fprintf(saida, "EXECUTION BY EDF\n");
     }
-    
+
     for (int i = 0; i < qtdEventos; i++) {
         if (eventos[i].tarefa == -1) {
             fprintf(saida, "idle for %d units\n", eventos[i].duracao);
